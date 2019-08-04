@@ -11,4 +11,4 @@ outputs:
     description: 'The time we we greeted you'
 runs:
   using: 'node12'
-  main: 'lib/hello-world.js'
+  main: 'index.js'
