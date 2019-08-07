@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@actions/core": "0.x",
-    "@actions/github: "0.x"
+    "@actions/core": "file:toolkit/actions-core-0.0.0.tgz",
+    "@actions/github": "file:toolkit/actions-github-0.0.0.tgz"
   }
 }
