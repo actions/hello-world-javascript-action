@@ -1,15 +1,24 @@
 {
-  "name": "hello-world-action",
+  "name": "hello-world-javascript-action",
   "version": "1.0.0",
-  "description": "My first JavaScript action",
+  "description": "This action prints \"Hello World\" or \"Hello\" + the name of a person to greet to the log.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actions/hello-world-javascript-action.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/actions/hello-world-javascript-action/issues"
+  },
+  "homepage": "https://github.com/actions/hello-world-javascript-action#readme",
   "dependencies": {
-    "@actions/core": "file:toolkit/actions-core-0.0.0.tgz",
-    "@actions/github": "file:toolkit/actions-github-0.0.0.tgz"
+    "@actions/core": "^1.1.0",
+    "@actions/github": "^1.1.0"
   }
 }
