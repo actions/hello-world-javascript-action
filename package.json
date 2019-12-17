@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/hello-world-javascript-action.git"
+    "url": "git+https://github.com/actions/hello-world-javascript-action.git" 
   },
   "keywords": [],
   "author": "",
