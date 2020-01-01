@@ -8,7 +8,7 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: actions/hello-world-javascript-action@pr-branch
+      uses: automodality/hello-world-javascript-action@pr-branch
       with:
         who-to-greet: 'Mona the Octocat'
     - name: Looking for PR Branch
