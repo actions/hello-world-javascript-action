@@ -12,11 +12,11 @@ jobs:
       with:
         who-to-greet: 'Mona the Octocat'
     - name: Looking for PR Branch
-      run: echo ${{ github.contenxt.payload.pull_request.head.ref }}
+      run: echo ${{ github.event.pull_request.head.ref }}
     - name: Github number
-      run: echo ${{ github.context.number }}
+      run: echo ${{ github.event.number }}
     - name: Github payload number
-      run: echo ${{ github.context.payload.number }}
+      run: echo ${{ github.event.payload.number }}
     # Use the output from the `hello` step
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}"
