@@ -5,8 +5,9 @@ try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello ${nameToGreet}!`);
-  console.log(`PR # ${github.context.payload.number}`);
+  console.log(`PR # ${github?.context?.payload?.number}`);
   console.log(`PR # ${github.context.payload.pull_request}`);
+  console.log(`PR # ${github.context.payload.pull_request.head.ref}`);
   console.log(`PR # ${github.context.payload[`pull_request`]}`);
   console.log(`PR # ${github.context.payload[`pull_request`].head.ref}`);
   const time = (new Date()).toTimeString();
