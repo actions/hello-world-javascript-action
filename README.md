@@ -21,3 +21,4 @@ uses: actions/hello-world-javascript-action@master
 with:
   who-to-greet: 'Mona the Octocat'
 ```
+
