@@ -1,0 +1,5 @@
+# needed to keep npm out, which is in by default and requires package.json
+plugins:
+  - "@semantic-release/commit-analyzer"
+  - "@semantic-release/github"
+  - "@semantic-release/release-notes-generator"
