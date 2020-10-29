@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:
+  build:
+    runs-on: [ self-hosted ]
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: ./ # Uses an action in the root directory
+        id: hello
+        with:
+          who-to-greet: 'Mona the Octocat'
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
