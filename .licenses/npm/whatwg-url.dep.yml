@@ -1,17 +1,16 @@
 ---
-name: p-finally
-version: 1.0.0
+name: whatwg-url
+version: 5.0.0
 type: npm
-summary: "`Promise#finally()` ponyfill - Invoked when the promise is settled regardless
-  of outcome"
-homepage: https://github.com/sindresorhus/p-finally#readme
+summary: An implementation of the WHATWG URL Standard's URL API and parsing machinery
+homepage: 
 license: mit
 licenses:
-- sources: license
+- sources: LICENSE.txt
   text: |
     The MIT License (MIT)
 
-    Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+    Copyright (c) 2015–2016 Sebastian Mayr
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -30,6 +29,4 @@ licenses:
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
-- sources: readme.md
-  text: MIT © [Sindre Sorhus](https://sindresorhus.com)
 notices: []
