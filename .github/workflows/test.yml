@@ -1,4 +1,4 @@
-name: Licensed
+name: Test
 
 on:
   pull_request:
@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     name: test
     steps:
-      - name: Hello
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Greet
         uses: ./
         with:
           who-to-greet: foo
