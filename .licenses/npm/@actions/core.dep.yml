@@ -3,7 +3,7 @@ name: "@actions/core"
 version: 1.6.0
 type: npm
 summary: Actions core lib
-homepage: https://github.com/actions/toolkit/tree/main/packages/core
+homepage: https://github.com/actions/toolkit/tree/master/packages/core
 license: mit
 licenses:
 - sources: LICENSE.md
