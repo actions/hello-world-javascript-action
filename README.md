@@ -1,23 +1,56 @@
-# Hello world JavaScript action
+# Hello, World! JavaScript Action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log. To learn how this action was built, see "[Creating a JavaScript action](https://help.github.com/en/articles/creating-a-javascript-action)" in the GitHub Help documentation.
+[![GitHub Super-Linter](https://github.com/actions/hello-world-javascript-action/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
+![CI](https://github.com/actions/hello-world-javascript-action/actions/workflows/ci.yml/badge.svg)
+
+This action prints `Hello, World!` or `Hello, <who-to-greet>!` to the log. To
+learn how this action was built, see
+[Creating a JavaScript action](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action).
+
+## Usage
+
+Here's an example of how to use this action in a workflow file:
+
+```yaml
+name: Example Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      who-to-greet:
+        description: Who to greet in the log
+        required: true
+        default: 'World'
+        type: string
+
+jobs:
+  say-hello:
+    name: Say Hello
+    runs-on: ubuntu-latest
+
+    steps:
+      # Change @main to a specific commit SHA or version tag, e.g.:
+      # actions/hello-world-javascript-action@e76147da8e5c81eaf017dede5645551d4b94427b
+      # actions/hello-world-javascript-action@v1.2.3
+      - name: Print to Log
+        id: print-to-log
+        uses: actions/hello-world-javascript-action@main
+        with:
+          who-to-greet: ${{ inputs.who-to-greet }}
+```
+
+For example workflow runs, check out the
+[Actions tab](https://github.com/actions/hello-world-javascript-action/actions)!
+:rocket:
 
 ## Inputs
 
-### `who-to-greet`
-
-**Required** The name of the person to greet. Default `"World"`.
+| Input          | Default | Description                     |
+| -------------- | ------- | ------------------------------- |
+| `who-to-greet` | `World` | The name of the person to greet |
 
 ## Outputs
 
-### `time`
-
-The time we greeted you.
-
-## Example usage
-
-```yaml
-uses: actions/hello-world-javascript-action@main
-with:
-  who-to-greet: 'Mona the Octocat'
-```
+| Output | Description             |
+| ------ | ----------------------- |
+| `time` | The time we greeted you |
