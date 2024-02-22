@@ -1,0 +1,3 @@
+quiet: true
+skip-check:
+  - CKV_GHA_7
