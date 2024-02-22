@@ -9,6 +9,10 @@ on:
         default: 'World'
         type: string
 
+permissions:
+  actions: read
+  contents: read
+
 jobs:
   say-hello:
     name: Say Hello
