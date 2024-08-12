@@ -58,7 +58,7 @@ jobs:
 
 For example workflow runs, check out the
 [Actions tab](https://github.com/actions/hello-world-javascript-action/actions)!
-:rocket:
+🚀
 
 ## Inputs
 
