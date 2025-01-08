@@ -31197,4 +31197,3 @@ var srcExports = requireSrc();
 var index = /*@__PURE__*/getDefaultExportFromCjs(srcExports);
 
 export { index as default };
-//# sourceMappingURL=index.js.map
