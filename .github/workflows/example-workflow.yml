@@ -6,7 +6,7 @@ on:
       who-to-greet:
         description: Who to greet in the log
         required: true
-        default: 'World'
+        default: World
         type: string
 
 permissions:

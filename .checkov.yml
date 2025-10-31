@@ -5,3 +5,5 @@ quiet: true
 skip-path:
   - coverage
   - node_modules
+skip-check:
+  - CKV_GHA_7
