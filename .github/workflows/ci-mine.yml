@@ -1,0 +1,53 @@
+name: demo-ci
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  show-git-info:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v5
+      with:
+        fetch-depth: 0  # full history so we can inspect git state
+
+    - name: Show Git & GitHub context
+      run: |
+        echo "==== BRANCHES ===="
+        git branch -a
+
+        echo "==== HEAD SHA ===="
+        git rev-parse HEAD
+
+        echo "==== REMOTE REFS ===="
+        git ls-remote origin | head
+
+        echo "==== GITHUB REF VARS ===="
+        echo "GITHUB_REF=$GITHUB_REF"
+        echo "GITHUB_HEAD_REF=$GITHUB_HEAD_REF"
+        echo "GITHUB_BASE_REF=$GITHUB_BASE_REF"
+        echo "GITHUB_SHA=$GITHUB_SHA"
+        echo "GITHUB_EVENT_NAME=$GITHUB_EVENT_NAME"
+
+        echo "==== LAST 5 COMMITS ===="
+        git log --oneline -5
+
+    - name: List files
+      run: ls -R
+      
+  dependency_review:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      
+    steps:
+    - uses: actions/checkout@v5
+    
+    - name: Dependency Review
+      uses: actions/dependency-review-action@v4
