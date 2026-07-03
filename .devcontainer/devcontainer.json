@@ -1,0 +1,4 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {"ghcr.io/devcontainer-config/features/dot-config:4": {}}
+}
